@@ -24,6 +24,6 @@ struct Recipe: Decodable {
     var similar: [RecipeBrief]
 }
 
-struct RecipeResponse {
+struct RecipeResponse: Decodable {
     var response: Recipe
 }

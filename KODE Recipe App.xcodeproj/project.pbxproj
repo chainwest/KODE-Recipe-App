@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78F0E6D0E911A9F79AD8ACF3 /* Pods_KODE_Recipe_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885D5C7D2F742B2B7BD8E467 /* Pods_KODE_Recipe_App.framework */; };
+		DA1A571E24A354A90047C637 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A571D24A354A90047C637 /* ApiService.swift */; };
 		DAF33DE324A3347D002E3EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */; };
 		DAF33DEC24A33480002E3EE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DEB24A33480002E3EE6 /* Assets.xcassets */; };
 		DAF33DEF24A33480002E3EE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DED24A33480002E3EE6 /* LaunchScreen.storyboard */; };
@@ -20,6 +21,7 @@
 		1A1E3C27E42E19555BCEA31C /* Pods-KODE Recipe App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KODE Recipe App.release.xcconfig"; path = "Target Support Files/Pods-KODE Recipe App/Pods-KODE Recipe App.release.xcconfig"; sourceTree = "<group>"; };
 		52CB2526063363183487B11C /* Pods-KODE Recipe App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KODE Recipe App.debug.xcconfig"; path = "Target Support Files/Pods-KODE Recipe App/Pods-KODE Recipe App.debug.xcconfig"; sourceTree = "<group>"; };
 		885D5C7D2F742B2B7BD8E467 /* Pods_KODE_Recipe_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KODE_Recipe_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1A571D24A354A90047C637 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		DAF33DDF24A3347D002E3EE6 /* KODE Recipe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KODE Recipe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF33DEB24A33480002E3EE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA1A571C24A3549C0047C637 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DA1A571D24A354A90047C637 /* ApiService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		DAF33DD624A3347D002E3EE6 = {
 			isa = PBXGroup;
 			children = (
@@ -72,24 +82,14 @@
 			isa = PBXGroup;
 			children = (
 				DAF33DF924A34709002E3EE6 /* Values */,
-				DAF33DF824A346FF002E3EE6 /* Services */,
+				DA1A571C24A3549C0047C637 /* Services */,
 				DAF33DF724A346F5002E3EE6 /* Models */,
-				DAF33DF624A346EA002E3EE6 /* Modules */,
 				DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */,
 				DAF33DEB24A33480002E3EE6 /* Assets.xcassets */,
 				DAF33DED24A33480002E3EE6 /* LaunchScreen.storyboard */,
 				DAF33DF024A33480002E3EE6 /* Info.plist */,
 			);
 			path = "KODE Recipe App";
-			sourceTree = "<group>";
-		};
-		DAF33DF624A346EA002E3EE6 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				DAF33DFB24A3471F002E3EE6 /* DetailsScreen */,
-				DAF33DFA24A34716002E3EE6 /* MainScreen */,
-			);
-			path = Modules;
 			sourceTree = "<group>";
 		};
 		DAF33DF724A346F5002E3EE6 /* Models */ = {
@@ -101,33 +101,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		DAF33DF824A346FF002E3EE6 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		DAF33DF924A34709002E3EE6 /* Values */ = {
 			isa = PBXGroup;
 			children = (
 				DAF33E0024A34984002E3EE6 /* Constants.swift */,
 			);
 			path = Values;
-			sourceTree = "<group>";
-		};
-		DAF33DFA24A34716002E3EE6 /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MainScreen;
-			sourceTree = "<group>";
-		};
-		DAF33DFB24A3471F002E3EE6 /* DetailsScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DetailsScreen;
 			sourceTree = "<group>";
 		};
 		DC43A65E68E9E944EC3E063E /* Pods */ = {
@@ -254,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAF33DE324A3347D002E3EE6 /* AppDelegate.swift in Sources */,
+				DA1A571E24A354A90047C637 /* ApiService.swift in Sources */,
 				DAF33DFD24A34741002E3EE6 /* RecipesList.swift in Sources */,
 				DAF33DFF24A3484D002E3EE6 /* SingleRecipe.swift in Sources */,
 				DAF33E0124A34984002E3EE6 /* Constants.swift in Sources */,
