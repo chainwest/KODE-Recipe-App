@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		DAF33DE324A3347D002E3EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */; };
 		DAF33DEC24A33480002E3EE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DEB24A33480002E3EE6 /* Assets.xcassets */; };
 		DAF33DEF24A33480002E3EE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DED24A33480002E3EE6 /* LaunchScreen.storyboard */; };
+		DAF33DFD24A34741002E3EE6 /* RecipesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF33DFC24A34741002E3EE6 /* RecipesList.swift */; };
+		DAF33DFF24A3484D002E3EE6 /* SingleRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF33DFE24A3484D002E3EE6 /* SingleRecipe.swift */; };
+		DAF33E0124A34984002E3EE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF33E0024A34984002E3EE6 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		DAF33DEB24A33480002E3EE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAF33DEE24A33480002E3EE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAF33DF024A33480002E3EE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAF33DFC24A34741002E3EE6 /* RecipesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesList.swift; sourceTree = "<group>"; };
+		DAF33DFE24A3484D002E3EE6 /* SingleRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRecipe.swift; sourceTree = "<group>"; };
+		DAF33E0024A34984002E3EE6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,10 @@
 		DAF33DE124A3347D002E3EE6 /* KODE Recipe App */ = {
 			isa = PBXGroup;
 			children = (
+				DAF33DF924A34709002E3EE6 /* Values */,
+				DAF33DF824A346FF002E3EE6 /* Services */,
+				DAF33DF724A346F5002E3EE6 /* Models */,
+				DAF33DF624A346EA002E3EE6 /* Modules */,
 				DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */,
 				DAF33DEB24A33480002E3EE6 /* Assets.xcassets */,
 				DAF33DED24A33480002E3EE6 /* LaunchScreen.storyboard */,
@@ -73,13 +83,59 @@
 			path = "KODE Recipe App";
 			sourceTree = "<group>";
 		};
+		DAF33DF624A346EA002E3EE6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DAF33DFB24A3471F002E3EE6 /* DetailsScreen */,
+				DAF33DFA24A34716002E3EE6 /* MainScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DAF33DF724A346F5002E3EE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DAF33DFC24A34741002E3EE6 /* RecipesList.swift */,
+				DAF33DFE24A3484D002E3EE6 /* SingleRecipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DAF33DF824A346FF002E3EE6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DAF33DF924A34709002E3EE6 /* Values */ = {
+			isa = PBXGroup;
+			children = (
+				DAF33E0024A34984002E3EE6 /* Constants.swift */,
+			);
+			path = Values;
+			sourceTree = "<group>";
+		};
+		DAF33DFA24A34716002E3EE6 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		DAF33DFB24A3471F002E3EE6 /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailsScreen;
+			sourceTree = "<group>";
+		};
 		DC43A65E68E9E944EC3E063E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				52CB2526063363183487B11C /* Pods-KODE Recipe App.debug.xcconfig */,
 				1A1E3C27E42E19555BCEA31C /* Pods-KODE Recipe App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -198,6 +254,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAF33DE324A3347D002E3EE6 /* AppDelegate.swift in Sources */,
+				DAF33DFD24A34741002E3EE6 /* RecipesList.swift in Sources */,
+				DAF33DFF24A3484D002E3EE6 /* SingleRecipe.swift in Sources */,
+				DAF33E0124A34984002E3EE6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
