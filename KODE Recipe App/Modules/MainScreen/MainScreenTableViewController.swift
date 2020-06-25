@@ -22,11 +22,12 @@ class MainScreenTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupTableView()
+        bindToViewModel()
     }
     
     func setupTableView() {
-        
+        viewModel.getRecipesList()
     }
     
     func bindToViewModel() {
@@ -44,9 +45,7 @@ extension MainScreenTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell")!
-        
         viewModel.setupCell(cell: cell)
-        
         return cell
     }
 }

@@ -22,6 +22,10 @@ class AppCoordinator: Coordinator {
     override func start() {
         guard let window = window else { return }
         
+        let mainScreenCoordinator = MainScreenCoordinator(rootViewController: rootViewController)
+        self.addChildCoordinator(mainScreenCoordinator)
+        mainScreenCoordinator.start()
+        
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
     }

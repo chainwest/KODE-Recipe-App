@@ -14,6 +14,7 @@
 		DA229E8B24A4AA2100EE3F19 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E8A24A4AA2100EE3F19 /* Coordinator.swift */; };
 		DA229E8D24A4AA6000EE3F19 /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E8C24A4AA6000EE3F19 /* MainScreenCoordinator.swift */; };
 		DA229E8F24A4AC0D00EE3F19 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E8E24A4AC0D00EE3F19 /* AppCoordinator.swift */; };
+		DA229E9124A4EC9100EE3F19 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E9024A4EC9100EE3F19 /* AppDependency.swift */; };
 		DAF33DE324A3347D002E3EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */; };
 		DAF33DEC24A33480002E3EE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DEB24A33480002E3EE6 /* Assets.xcassets */; };
 		DAF33DEF24A33480002E3EE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DED24A33480002E3EE6 /* LaunchScreen.storyboard */; };
@@ -32,6 +33,7 @@
 		DA229E8A24A4AA2100EE3F19 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DA229E8C24A4AA6000EE3F19 /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
 		DA229E8E24A4AC0D00EE3F19 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DA229E9024A4EC9100EE3F19 /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
 		DAF33DDF24A3347D002E3EE6 /* KODE Recipe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KODE Recipe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF33DEB24A33480002E3EE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				DA1A571C24A3549C0047C637 /* Services */,
 				DAF33DF724A346F5002E3EE6 /* Models */,
 				DA1A571F24A3595D0047C637 /* Modules */,
+				DA229E9024A4EC9100EE3F19 /* AppDependency.swift */,
 				DA229E8E24A4AC0D00EE3F19 /* AppCoordinator.swift */,
 				DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */,
 				DAF33DEB24A33480002E3EE6 /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA229E9124A4EC9100EE3F19 /* AppDependency.swift in Sources */,
 				DA229E8B24A4AA2100EE3F19 /* Coordinator.swift in Sources */,
 				DA1A572224A359A20047C637 /* MainScreenTableViewController.swift in Sources */,
 				DA229E8F24A4AC0D00EE3F19 /* AppCoordinator.swift in Sources */,

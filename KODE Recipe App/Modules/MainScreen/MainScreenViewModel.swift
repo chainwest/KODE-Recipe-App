@@ -8,12 +8,14 @@
 
 import Kingfisher
 
-protocol MainScreenViewModelDelegate {
+protocol MainScreenViewModelDelegate: class {
     func didRequestShowDetails()
 }
 
 class MainScreenViewModel {
     typealias Dependencies = HasApiService
+    
+    weak var delegate: MainScreenViewModelDelegate?
     
     let dependencies: Dependencies
     
