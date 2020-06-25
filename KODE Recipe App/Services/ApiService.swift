@@ -8,6 +8,10 @@
 
 import Alamofire
 
+protocol HasApiService {
+    var apiService: ApiService { get }
+}
+
 class ApiService {
     private func baseRequest<T>(url: String, method: HTTPMethod, params: Parameters? = nil,
                                 completion: @escaping (Swift.Result<T, Error>) -> Void) where T: Decodable {

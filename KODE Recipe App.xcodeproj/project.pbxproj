@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		78F0E6D0E911A9F79AD8ACF3 /* Pods_KODE_Recipe_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885D5C7D2F742B2B7BD8E467 /* Pods_KODE_Recipe_App.framework */; };
 		DA1A571E24A354A90047C637 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A571D24A354A90047C637 /* ApiService.swift */; };
+		DA1A572224A359A20047C637 /* MainScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A572124A359A20047C637 /* MainScreenTableViewController.swift */; };
+		DA1A572424A386770047C637 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A572324A386770047C637 /* MainScreenViewModel.swift */; };
+		DA229E8B24A4AA2100EE3F19 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E8A24A4AA2100EE3F19 /* Coordinator.swift */; };
+		DA229E8D24A4AA6000EE3F19 /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E8C24A4AA6000EE3F19 /* MainScreenCoordinator.swift */; };
+		DA229E8F24A4AC0D00EE3F19 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E8E24A4AC0D00EE3F19 /* AppCoordinator.swift */; };
 		DAF33DE324A3347D002E3EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */; };
 		DAF33DEC24A33480002E3EE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DEB24A33480002E3EE6 /* Assets.xcassets */; };
 		DAF33DEF24A33480002E3EE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DED24A33480002E3EE6 /* LaunchScreen.storyboard */; };
@@ -22,6 +27,11 @@
 		52CB2526063363183487B11C /* Pods-KODE Recipe App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KODE Recipe App.debug.xcconfig"; path = "Target Support Files/Pods-KODE Recipe App/Pods-KODE Recipe App.debug.xcconfig"; sourceTree = "<group>"; };
 		885D5C7D2F742B2B7BD8E467 /* Pods_KODE_Recipe_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KODE_Recipe_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1A571D24A354A90047C637 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		DA1A572124A359A20047C637 /* MainScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewController.swift; sourceTree = "<group>"; };
+		DA1A572324A386770047C637 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		DA229E8A24A4AA2100EE3F19 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DA229E8C24A4AA6000EE3F19 /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
+		DA229E8E24A4AC0D00EE3F19 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DAF33DDF24A3347D002E3EE6 /* KODE Recipe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KODE Recipe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF33DEB24A33480002E3EE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +70,25 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		DA1A571F24A3595D0047C637 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DA1A572024A3597A0047C637 /* MainScreen */,
+				DA229E8A24A4AA2100EE3F19 /* Coordinator.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DA1A572024A3597A0047C637 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DA1A572324A386770047C637 /* MainScreenViewModel.swift */,
+				DA1A572124A359A20047C637 /* MainScreenTableViewController.swift */,
+				DA229E8C24A4AA6000EE3F19 /* MainScreenCoordinator.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 		DAF33DD624A3347D002E3EE6 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +113,8 @@
 				DAF33DF924A34709002E3EE6 /* Values */,
 				DA1A571C24A3549C0047C637 /* Services */,
 				DAF33DF724A346F5002E3EE6 /* Models */,
+				DA1A571F24A3595D0047C637 /* Modules */,
+				DA229E8E24A4AC0D00EE3F19 /* AppCoordinator.swift */,
 				DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */,
 				DAF33DEB24A33480002E3EE6 /* Assets.xcassets */,
 				DAF33DED24A33480002E3EE6 /* LaunchScreen.storyboard */,
@@ -232,9 +263,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA229E8B24A4AA2100EE3F19 /* Coordinator.swift in Sources */,
+				DA1A572224A359A20047C637 /* MainScreenTableViewController.swift in Sources */,
+				DA229E8F24A4AC0D00EE3F19 /* AppCoordinator.swift in Sources */,
+				DA1A572424A386770047C637 /* MainScreenViewModel.swift in Sources */,
 				DAF33DE324A3347D002E3EE6 /* AppDelegate.swift in Sources */,
 				DA1A571E24A354A90047C637 /* ApiService.swift in Sources */,
 				DAF33DFD24A34741002E3EE6 /* RecipesList.swift in Sources */,
+				DA229E8D24A4AA6000EE3F19 /* MainScreenCoordinator.swift in Sources */,
 				DAF33DFF24A3484D002E3EE6 /* SingleRecipe.swift in Sources */,
 				DAF33E0124A34984002E3EE6 /* Constants.swift in Sources */,
 			);
