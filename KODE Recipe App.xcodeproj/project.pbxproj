@@ -15,6 +15,7 @@
 		DA229E8D24A4AA6000EE3F19 /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E8C24A4AA6000EE3F19 /* MainScreenCoordinator.swift */; };
 		DA229E8F24A4AC0D00EE3F19 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E8E24A4AC0D00EE3F19 /* AppCoordinator.swift */; };
 		DA229E9124A4EC9100EE3F19 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E9024A4EC9100EE3F19 /* AppDependency.swift */; };
+		DA229E9324A5A4A600EE3F19 /* RecipeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E9224A5A4A600EE3F19 /* RecipeListCell.swift */; };
 		DAF33DE324A3347D002E3EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */; };
 		DAF33DEC24A33480002E3EE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DEB24A33480002E3EE6 /* Assets.xcassets */; };
 		DAF33DEF24A33480002E3EE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DED24A33480002E3EE6 /* LaunchScreen.storyboard */; };
@@ -34,6 +35,7 @@
 		DA229E8C24A4AA6000EE3F19 /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
 		DA229E8E24A4AC0D00EE3F19 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DA229E9024A4EC9100EE3F19 /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
+		DA229E9224A5A4A600EE3F19 /* RecipeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListCell.swift; sourceTree = "<group>"; };
 		DAF33DDF24A3347D002E3EE6 /* KODE Recipe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KODE Recipe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF33DEB24A33480002E3EE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				DA1A572324A386770047C637 /* MainScreenViewModel.swift */,
 				DA1A572124A359A20047C637 /* MainScreenTableViewController.swift */,
 				DA229E8C24A4AA6000EE3F19 /* MainScreenCoordinator.swift */,
+				DA229E9224A5A4A600EE3F19 /* RecipeListCell.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				DA229E8D24A4AA6000EE3F19 /* MainScreenCoordinator.swift in Sources */,
 				DAF33DFF24A3484D002E3EE6 /* SingleRecipe.swift in Sources */,
 				DAF33E0124A34984002E3EE6 /* Constants.swift in Sources */,
+				DA229E9324A5A4A600EE3F19 /* RecipeListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L5W87GC5M7;
+				DEVELOPMENT_TEAM = T5T228SHK5;
 				INFOPLIST_FILE = "KODE Recipe App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -433,7 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L5W87GC5M7;
+				DEVELOPMENT_TEAM = T5T228SHK5;
 				INFOPLIST_FILE = "KODE Recipe App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

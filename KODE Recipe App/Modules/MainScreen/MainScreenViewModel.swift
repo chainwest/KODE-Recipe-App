@@ -21,7 +21,7 @@ class MainScreenViewModel {
     
     var onDidUpdate: (() -> Void)?
     
-    private(set) var recipeList: RecipesListResponse?
+    private(set) var recipeList: [RecipeListElement]?
     private(set) var numberOfRows: Int = 0
     
     init(dependencies: Dependencies) {
@@ -34,8 +34,8 @@ class MainScreenViewModel {
         dependencies.apiService.getRecipesList { response in
             switch response {
             case .success(let data):
-                self.recipeList = data
-                self.numberOfRows = data.response.count
+                self.recipeList = data.recipes
+                self.numberOfRows = data.recipes.count
                 self.onDidUpdate?()
             case .failure(let error):
                 print(error)
@@ -50,7 +50,7 @@ class MainScreenViewModel {
     //MARK: - TableView methods
     
     func setupCell(cell: UITableViewCell) {
-        cell.textLabel?.text = recipeList?.response.first?.name
+        cell.textLabel?.text = recipeList?.first?.name
     }
     
     func getNumberOfRows() -> Int {
