@@ -29,7 +29,9 @@ class MainScreenTableViewController: UITableViewController {
     func setupTableView() {
         self.navigationItem.title = "Recipes List"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+        tableView.rowHeight = 130
+        tableView.separatorStyle = .none
+        tableView.register(UINib(nibName: "MainScreenTableViewCell", bundle: nil), forCellReuseIdentifier: "MyCell")
         viewModel.getRecipesList()
     }
     
@@ -47,8 +49,8 @@ extension MainScreenTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell")
-        viewModel.setupCell(cell: cell!)
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") as! MainScreenTableViewCell
+        viewModel.setupCell(cell: cell, indexPath: indexPath)
+        return cell
     }
 }

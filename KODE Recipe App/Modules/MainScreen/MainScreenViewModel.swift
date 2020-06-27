@@ -44,13 +44,18 @@ class MainScreenViewModel {
     }
     
     func getSingleRecipe() {
-        
+        //dependencies.apiService.getRecipe(uuid: <#T##String#>, completion: <#T##(Result<RecipeResponse, Error>) -> Void#>)
     }
     
     //MARK: - TableView methods
     
-    func setupCell(cell: UITableViewCell) {
-        cell.textLabel?.text = recipeList?.first?.name
+    func setupCell(cell: MainScreenTableViewCell, indexPath: IndexPath) {
+        let imageURL = URL(string: (recipeList?[indexPath.row].images.first)!)
+        
+        cell.titleLabel.text = recipeList?[indexPath.row].name
+        cell.descriptionLabel.text = recipeList?[indexPath.row].description
+        //cell.dateLabel.text = String(recipeList?[indexPath.row].lastUpdated)
+        cell.recipeImageView.kf.setImage(with: imageURL)
     }
     
     func getNumberOfRows() -> Int {
