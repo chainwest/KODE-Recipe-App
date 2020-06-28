@@ -18,4 +18,21 @@ class MainScreenTableViewCell: UITableViewCell {
             recipeImageView.layer.cornerRadius = 10
         }
     }
+    
+    override func awakeFromNib() {
+       super.awakeFromNib()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+       super.init(coder: aDecoder)
+    }
+    
+    func setupCell(viewModel: MainScreenViewModel, indexPath: IndexPath) {
+        let imageURL = URL(string: (viewModel.recipeList[indexPath.row].images.first)!)
+        
+        titleLabel.text = viewModel.recipeList[indexPath.row].name
+        descriptionLabel.text = viewModel.recipeList[indexPath.row].description
+        dateLabel.text = String(viewModel.recipeList[indexPath.row].lastUpdated)
+        recipeImageView.kf.setImage(with: imageURL)
+    }
 }

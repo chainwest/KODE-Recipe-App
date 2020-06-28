@@ -8,6 +8,14 @@
 
 import Alamofire
 
+struct RecipeResponse: Decodable {
+    var response: Recipe
+}
+
+struct RecipesListResponse: Decodable {
+    var recipes: [RecipeListElement]
+}
+
 protocol HasApiService {
     var apiService: ApiService { get }
 }

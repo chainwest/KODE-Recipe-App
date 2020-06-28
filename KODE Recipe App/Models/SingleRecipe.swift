@@ -23,7 +23,3 @@ struct Recipe: Decodable {
     var difficulty: Int
     var similar: [RecipeBrief]
 }
-
-struct RecipeResponse: Decodable {
-    var response: Recipe
-}

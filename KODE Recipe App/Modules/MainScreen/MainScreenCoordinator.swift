@@ -9,7 +9,8 @@
 import UIKit
 
 class MainScreenCoordinator: Coordinator {
-    let rootViewController: UINavigationController
+    private let rootViewController: UINavigationController
+    private var searchResultsUpdater: SearchResultUpdater?
     
     var mainScreenViewModel: MainScreenViewModel = {
         let dependencies = AppDependency.makeDefault()
@@ -24,10 +25,21 @@ class MainScreenCoordinator: Coordinator {
     override func start() {
         mainScreenViewModel.delegate = self
         let mainScreenViewController = MainScreenTableViewController(viewModel: mainScreenViewModel)
+        setupSearchBar(viewController: mainScreenViewController)
         rootViewController.setViewControllers([mainScreenViewController], animated: false)
+    }
+    
+    func setupSearchBar(viewController: UIViewController) {
+        let searchBar = UISearchController(searchResultsController: nil)
+        searchBar.searchResultsUpdater = searchResultsUpdater
+        searchBar.obscuresBackgroundDuringPresentation = false
+        viewController.navigationItem.searchController = searchBar
+        viewController.navigationItem.hidesSearchBarWhenScrolling = true
     }
 }
 
 extension MainScreenCoordinator: MainScreenViewModelDelegate {
-    func didRequestShowDetails() {}
+    func didRequestShowDetails(uuid: String) {
+        
+    }
 }

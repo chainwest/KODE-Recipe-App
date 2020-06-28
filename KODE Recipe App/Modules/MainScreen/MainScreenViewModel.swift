@@ -9,20 +9,22 @@
 import Kingfisher
 
 protocol MainScreenViewModelDelegate: class {
-    func didRequestShowDetails()
+    func didRequestShowDetails(uuid: String)
 }
 
 class MainScreenViewModel {
     typealias Dependencies = HasApiService
     
     weak var delegate: MainScreenViewModelDelegate?
-    
     let dependencies: Dependencies
     
     var onDidUpdate: (() -> Void)?
+    var onDidError: ((Error) -> Void)?
     
-    private(set) var recipeList: [RecipeListElement]?
-    private(set) var numberOfRows: Int = 0
+    private(set) var recipeList = [RecipeListElement]()
+    private var numberOfRows: Int {
+        return recipeList.count
+    }
     
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
@@ -35,7 +37,6 @@ class MainScreenViewModel {
             switch response {
             case .success(let data):
                 self.recipeList = data.recipes
-                self.numberOfRows = data.recipes.count
                 self.onDidUpdate?()
             case .failure(let error):
                 print(error)
@@ -43,22 +44,20 @@ class MainScreenViewModel {
         }
     }
     
-    func getSingleRecipe() {
-        //dependencies.apiService.getRecipe(uuid: <#T##String#>, completion: <#T##(Result<RecipeResponse, Error>) -> Void#>)
+    //MARK: - List filtering
+    
+    func filterList(input: String) {
+        
     }
     
     //MARK: - TableView methods
     
-    func setupCell(cell: MainScreenTableViewCell, indexPath: IndexPath) {
-        let imageURL = URL(string: (recipeList?[indexPath.row].images.first)!)
-        
-        cell.titleLabel.text = recipeList?[indexPath.row].name
-        cell.descriptionLabel.text = recipeList?[indexPath.row].description
-        //cell.dateLabel.text = String(recipeList?[indexPath.row].lastUpdated)
-        cell.recipeImageView.kf.setImage(with: imageURL)
-    }
-    
     func getNumberOfRows() -> Int {
         return numberOfRows
+    }
+    
+    func didSelectRow(uuid: Int) {
+        let uuid = recipeList[uuid].uuid
+        delegate?.didRequestShowDetails(uuid: uuid)
     }
 }

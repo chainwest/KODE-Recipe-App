@@ -50,7 +50,11 @@ extension MainScreenTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") as! MainScreenTableViewCell
-        viewModel.setupCell(cell: cell, indexPath: indexPath)
+        cell.setupCell(viewModel: viewModel, indexPath: indexPath)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRow(uuid: indexPath.row)
     }
 }

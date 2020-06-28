@@ -17,7 +17,3 @@ struct RecipeListElement: Decodable {
     var instructions: String
     var difficulty: Int
 }
-
-struct RecipesListResponse: Decodable {
-    var recipes: [RecipeListElement]
-}
