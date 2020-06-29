@@ -18,8 +18,9 @@
 		DA229E9D24A73D1A00EE3F19 /* MainScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E9B24A73D1900EE3F19 /* MainScreenTableViewCell.swift */; };
 		DA229E9E24A73D1A00EE3F19 /* MainScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA229E9C24A73D1A00EE3F19 /* MainScreenTableViewCell.xib */; };
 		DADEAB6124A7CF82002729F4 /* DetailsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEAB6024A7CF82002729F4 /* DetailsScreenViewModel.swift */; };
-		DADEAB6324A7D250002729F4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEAB6224A7D250002729F4 /* DetailsViewController.swift */; };
 		DADEAB6524A87B4F002729F4 /* SearchResultUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEAB6424A87B4F002729F4 /* SearchResultUpdater.swift */; };
+		DAEB1C5E24A9B1260000D622 /* DetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB1C5C24A9B1260000D622 /* DetailsScreenViewController.swift */; };
+		DAEB1C5F24A9B1260000D622 /* DetailsScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAEB1C5D24A9B1260000D622 /* DetailsScreenViewController.xib */; };
 		DAF33DE324A3347D002E3EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */; };
 		DAF33DEC24A33480002E3EE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DEB24A33480002E3EE6 /* Assets.xcassets */; };
 		DAF33DEF24A33480002E3EE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DED24A33480002E3EE6 /* LaunchScreen.storyboard */; };
@@ -42,8 +43,9 @@
 		DA229E9B24A73D1900EE3F19 /* MainScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewCell.swift; sourceTree = "<group>"; };
 		DA229E9C24A73D1A00EE3F19 /* MainScreenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenTableViewCell.xib; sourceTree = "<group>"; };
 		DADEAB6024A7CF82002729F4 /* DetailsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewModel.swift; sourceTree = "<group>"; };
-		DADEAB6224A7D250002729F4 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		DADEAB6424A87B4F002729F4 /* SearchResultUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultUpdater.swift; sourceTree = "<group>"; };
+		DAEB1C5C24A9B1260000D622 /* DetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewController.swift; sourceTree = "<group>"; };
+		DAEB1C5D24A9B1260000D622 /* DetailsScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsScreenViewController.xib; sourceTree = "<group>"; };
 		DAF33DDF24A3347D002E3EE6 /* KODE Recipe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KODE Recipe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF33DEB24A33480002E3EE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,7 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				DADEAB6024A7CF82002729F4 /* DetailsScreenViewModel.swift */,
-				DADEAB6224A7D250002729F4 /* DetailsViewController.swift */,
+				DAEB1C5C24A9B1260000D622 /* DetailsScreenViewController.swift */,
+				DAEB1C5D24A9B1260000D622 /* DetailsScreenViewController.xib */,
 			);
 			path = DetailsScreen;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA229E9E24A73D1A00EE3F19 /* MainScreenTableViewCell.xib in Resources */,
+				DAEB1C5F24A9B1260000D622 /* DetailsScreenViewController.xib in Resources */,
 				DAF33DEF24A33480002E3EE6 /* LaunchScreen.storyboard in Resources */,
 				DAF33DEC24A33480002E3EE6 /* Assets.xcassets in Resources */,
 			);
@@ -302,7 +306,7 @@
 				DAF33DFD24A34741002E3EE6 /* RecipesList.swift in Sources */,
 				DA229E9D24A73D1A00EE3F19 /* MainScreenTableViewCell.swift in Sources */,
 				DA229E8D24A4AA6000EE3F19 /* MainScreenCoordinator.swift in Sources */,
-				DADEAB6324A7D250002729F4 /* DetailsViewController.swift in Sources */,
+				DAEB1C5E24A9B1260000D622 /* DetailsScreenViewController.swift in Sources */,
 				DAF33DFF24A3484D002E3EE6 /* SingleRecipe.swift in Sources */,
 				DAF33E0124A34984002E3EE6 /* Constants.swift in Sources */,
 			);

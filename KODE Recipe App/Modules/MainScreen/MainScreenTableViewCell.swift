@@ -32,7 +32,7 @@ class MainScreenTableViewCell: UITableViewCell {
         
         titleLabel.text = viewModel.recipeList[indexPath.row].name
         descriptionLabel.text = viewModel.recipeList[indexPath.row].description
-        dateLabel.text = String(viewModel.recipeList[indexPath.row].lastUpdated)
+        //dateLabel.text = String(viewModel.recipeList[indexPath.row].lastUpdated)
         recipeImageView.kf.setImage(with: imageURL)
     }
 }

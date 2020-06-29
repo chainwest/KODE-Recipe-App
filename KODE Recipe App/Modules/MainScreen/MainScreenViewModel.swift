@@ -22,6 +22,7 @@ class MainScreenViewModel {
     var onDidError: ((Error) -> Void)?
     
     private(set) var recipeList = [RecipeListElement]()
+    private(set) var filteredRecipeList = [RecipeListElement]()
     private var numberOfRows: Int {
         return recipeList.count
     }
@@ -47,7 +48,19 @@ class MainScreenViewModel {
     //MARK: - List filtering
     
     func filterList(input: String) {
+        let lowercasedInput = input.lowercased()
         
+        guard !input.isEmpty else {
+            onDidUpdate?()
+            return
+        }
+        
+        recipeList = recipeList.filter { recipe -> Bool in
+            recipe.name.lowercased().contains(lowercasedInput) ||
+            recipe.instructions.lowercased().contains(lowercasedInput) ||
+            recipe.description!.lowercased().contains(lowercasedInput)
+        }
+        onDidUpdate?()
     }
     
     //MARK: - TableView methods

@@ -27,7 +27,7 @@ class MainScreenTableViewController: UITableViewController {
     }
     
     func setupTableView() {
-        self.navigationItem.title = "Recipes List"
+        self.navigationItem.title = "Recipe List"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         tableView.rowHeight = 130
         tableView.separatorStyle = .none
