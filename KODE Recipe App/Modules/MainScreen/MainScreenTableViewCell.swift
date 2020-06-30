@@ -28,10 +28,10 @@ class MainScreenTableViewCell: UITableViewCell {
     }
     
     func setupCell(viewModel: MainScreenViewModel, indexPath: IndexPath) {
-        let imageURL = URL(string: (viewModel.recipeList[indexPath.row].images.first)!)
+        let imageURL = URL(string: (viewModel.filteredRecipeList[indexPath.row].images.first)!)
         
-        titleLabel.text = viewModel.recipeList[indexPath.row].name
-        descriptionLabel.text = viewModel.recipeList[indexPath.row].description
+        titleLabel.text = viewModel.filteredRecipeList[indexPath.row].name
+        descriptionLabel.text = viewModel.filteredRecipeList[indexPath.row].description
         //dateLabel.text = String(viewModel.recipeList[indexPath.row].lastUpdated)
         recipeImageView.kf.setImage(with: imageURL)
     }

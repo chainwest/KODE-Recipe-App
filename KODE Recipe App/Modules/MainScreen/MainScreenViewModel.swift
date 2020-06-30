@@ -19,13 +19,10 @@ class MainScreenViewModel {
     let dependencies: Dependencies
     
     var onDidUpdate: (() -> Void)?
-    var onDidError: ((Error) -> Void)?
     
     private(set) var recipeList = [RecipeListElement]()
     private(set) var filteredRecipeList = [RecipeListElement]()
-    private var numberOfRows: Int {
-        return recipeList.count
-    }
+    private var numberOfRows: Int = 0
     
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
@@ -38,6 +35,8 @@ class MainScreenViewModel {
             switch response {
             case .success(let data):
                 self.recipeList = data.recipes
+                self.filteredRecipeList = self.recipeList
+                self.numberOfRows = self.recipeList.count
                 self.onDidUpdate?()
             case .failure(let error):
                 print(error)
@@ -51,15 +50,20 @@ class MainScreenViewModel {
         let lowercasedInput = input.lowercased()
         
         guard !input.isEmpty else {
-            onDidUpdate?()
+            updateRecipes()
             return
         }
         
-        recipeList = recipeList.filter { recipe -> Bool in
+        filteredRecipeList = recipeList.filter { recipe -> Bool in
             recipe.name.lowercased().contains(lowercasedInput) ||
             recipe.instructions.lowercased().contains(lowercasedInput) ||
             recipe.description!.lowercased().contains(lowercasedInput)
         }
+        updateRecipes()
+    }
+    
+    private func updateRecipes() {
+        self.numberOfRows = filteredRecipeList.count
         onDidUpdate?()
     }
     

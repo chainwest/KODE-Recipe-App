@@ -19,5 +19,9 @@ class SearchResultUpdater: NSObject, UISearchResultsUpdating {
         guard let searchInput = searchController.searchBar.text else { return }
         
         viewModel.filterList(input: searchInput)
+        
+        if !searchController.isActive {
+            viewModel.getRecipesList()
+        }
     }
 }

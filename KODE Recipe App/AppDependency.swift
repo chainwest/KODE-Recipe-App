@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol HasApiService {
+    var apiService: ApiService { get }
+}
+
 class AppDependency: HasApiService {
     var apiService: ApiService
     

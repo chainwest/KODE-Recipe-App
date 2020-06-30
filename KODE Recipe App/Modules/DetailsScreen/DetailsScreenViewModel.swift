@@ -21,7 +21,6 @@ class DetailsScreenViewModel {
     let uuid: String
     
     var onDidUpdate: (() -> Void)?
-    var onDidError: ((Error) -> Void)?
     
     init(dependencies: Dependencies, uuid: String) {
         self.dependencies = dependencies
@@ -29,11 +28,12 @@ class DetailsScreenViewModel {
         getRecipe()
     }
     
-    private func getRecipe() {
+    func getRecipe() {
         dependencies.apiService.getRecipe(uuid: uuid) { response in
             switch response {
             case .success(let data):
                 self.recipeResponse = data.response
+                self.onDidUpdate?()
             case .failure(let error):
                 print(error)
             }
