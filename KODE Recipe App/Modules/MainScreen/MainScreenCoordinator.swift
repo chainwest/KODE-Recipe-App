@@ -35,11 +35,20 @@ class MainScreenCoordinator: Coordinator {
         searchBar.obscuresBackgroundDuringPresentation = false
         viewController.navigationItem.searchController = searchBar
         viewController.navigationItem.hidesSearchBarWhenScrolling = true
+        viewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sort by", style: .plain, target: self, action: #selector(MainScreenTableViewController.sortList))
+        viewController.navigationItem.rightBarButtonItem?.tintColor = .darkText
     }
 }
 
 extension MainScreenCoordinator: MainScreenViewModelDelegate {
     func didRequestShowDetails(uuid: String) {
-        
+        let detailsScreenCoordinator = DetailsScreenCoordinator(uuid: uuid, rootViewController: rootViewController)
+        detailsScreenCoordinator.coordinatorDelegate = self
+        addChildCoordinator(detailsScreenCoordinator)
+        detailsScreenCoordinator.start()
     }
+}
+
+extension MainScreenCoordinator: DetailsScreenCoordinatorDelegate {
+    func didFinish(from coordinator: DetailsScreenCoordinator) {}
 }

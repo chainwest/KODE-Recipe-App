@@ -7,6 +7,7 @@
 //
 
 import Kingfisher
+import UIKit
 
 protocol MainScreenViewModelDelegate: class {
     func didRequestShowDetails(uuid: String)
@@ -66,6 +67,25 @@ class MainScreenViewModel {
         self.numberOfRows = filteredRecipeList.count
         onDidUpdate?()
     }
+    
+    //MARK: - Sort List
+    
+//    func sortByName() -> UIAlertAction {
+//
+//
+//        return actionSortByName
+//    }
+//
+//    func sortByDate() -> UIAlertAction {
+//        let actionSortByDate = UIAlertAction(title: "By date", style: .default) { alert in
+//            self.filteredRecipeList.sort { (first, second) -> Bool in
+//                first.lastUpdated < second.lastUpdated
+//            }
+//            self.onDidUpdate?()
+//        }
+//
+//        return actionSortByDate
+//    }
     
     //MARK: - TableView methods
     

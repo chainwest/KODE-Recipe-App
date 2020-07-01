@@ -16,7 +16,7 @@ class DetailsScreenViewModel {
     typealias Dependencies = HasApiService
     
     weak var delegate: DetailsScreenViewModelDelegate?
-    var recipeResponse: Recipe?
+    var recipeResponse: RecipeResponse?
     let dependencies: Dependencies
     let uuid: String
     
@@ -32,7 +32,7 @@ class DetailsScreenViewModel {
         dependencies.apiService.getRecipe(uuid: uuid) { response in
             switch response {
             case .success(let data):
-                self.recipeResponse = data.response
+                self.recipeResponse = data
                 self.onDidUpdate?()
             case .failure(let error):
                 print(error)

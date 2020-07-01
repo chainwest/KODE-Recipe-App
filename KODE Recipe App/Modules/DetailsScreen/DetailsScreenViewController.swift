@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class DetailsScreenViewController: UIViewController {
+class DetailsScreenViewController: UIViewController, UIScrollViewDelegate {
     let viewModel: DetailsScreenViewModel
     
     @IBOutlet weak var sliderContainerView: UIView!
@@ -38,29 +38,69 @@ class DetailsScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.getRecipe()
         bindToViewModel()
     }
     
-    func bindToViewModel() {
-        viewModel.getRecipe()
+    private func bindToViewModel() {
         viewModel.onDidUpdate = { [weak self] in
-            self?.setupImageSlider(recipe: self!.viewModel.recipeResponse!)
+            self?.setupImageSlider(recipe: (self?.viewModel.recipeResponse)!)
+            self?.setupLabels(recipe: (self?.viewModel.recipeResponse)!)
+            self?.setupDifficulty(recipe: (self?.viewModel.recipeResponse)!)
         }
     }
     
-    func setupImageSlider(recipe: Recipe) {
-        sliderScrollView.frame = sliderContainerView.frame
+    private func setupImageSlider(recipe: RecipeResponse) {
+        sliderScrollView.isPagingEnabled = true
+        sliderScrollView.showsHorizontalScrollIndicator = false
+        pageControl.numberOfPages = recipe.recipe.images.count
         
-        for i in 0..<recipe.images.count {
+        for image in 0..<recipe.recipe.images.count {
             let imageView = UIImageView()
-            let image = URL(string: recipe.images[i])
-            let xPosition = self.sliderContainerView.frame.width * CGFloat(i)
+            let imageURL = URL(string: recipe.recipe.images[image])
+            let xPosition = self.sliderContainerView.frame.width * CGFloat(image)
+            
             imageView.frame = CGRect(x: xPosition, y: 0, width: self.sliderScrollView.frame.width, height: self.sliderScrollView.frame.height)
-            imageView.kf.setImage(with: image)
-            imageView.contentMode = .scaleAspectFit
-            sliderScrollView.contentSize.width = sliderScrollView.frame.width * CGFloat(i + 1)
+            imageView.kf.setImage(with: imageURL)
+            imageView.contentMode = .scaleAspectFill
+            
+            sliderScrollView.delegate = self
+            sliderScrollView.contentSize.width = sliderScrollView.frame.width * CGFloat(image + 1)
             sliderScrollView.addSubview(imageView)
         }
     }
+    
+    private func setupLabels(recipe: RecipeResponse) {
+        titleLabel.text = recipe.recipe.name
+        //dateLabel.text = String(recipe.recipe.lastUpdated)
+        descriptionLabel.text = recipe.recipe.description
+        instructionLabel.text = recipe.recipe.instructions
+    }
+    
+    private func setupDifficulty(recipe: RecipeResponse) {
+        var difficulty = recipe.recipe.difficulty
+        let imageViews = [
+           difficultyOne,
+           difficultyTwo,
+           difficultyThree,
+           difficultyFour,
+           difficultyFive
+        ]
+        
+        for imageView in imageViews {
+            if difficulty > 0 {
+                imageView?.image = UIImage(named: "Shape")
+                difficulty -= 1
+            } else {
+                imageView?.image = UIImage(named: "Shape-2")
+            }
+        }
+    }
+}
 
+extension DetailsScreenViewController {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let currentPageNumber = sliderScrollView.contentOffset.x / sliderScrollView.frame.size.width
+        pageControl.currentPage = Int(currentPageNumber)
+    }
 }

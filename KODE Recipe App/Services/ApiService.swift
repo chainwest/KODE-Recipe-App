@@ -9,7 +9,7 @@
 import Alamofire
 
 struct RecipeResponse: Decodable {
-    var response: Recipe
+    var recipe: Recipe
 }
 
 struct RecipesListResponse: Decodable {
