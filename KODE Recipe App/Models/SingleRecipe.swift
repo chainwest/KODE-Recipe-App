@@ -18,7 +18,7 @@ struct Recipe: Decodable {
     var name: String
     var images: [String]
     var lastUpdated: Int
-    var description: String
+    var description: String?
     var instructions: String
     var difficulty: Int
     var similar: [RecipeBrief]

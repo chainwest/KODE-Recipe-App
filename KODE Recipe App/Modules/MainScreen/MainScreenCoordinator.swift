@@ -24,16 +24,17 @@ class MainScreenCoordinator: Coordinator {
     
     override func start() {
         mainScreenViewModel.delegate = self
+        searchResultsUpdater = SearchResultUpdater(viewModel: mainScreenViewModel)
         let mainScreenViewController = MainScreenTableViewController(viewModel: mainScreenViewModel)
         setupSearchBar(viewController: mainScreenViewController)
         rootViewController.setViewControllers([mainScreenViewController], animated: false)
     }
     
     func setupSearchBar(viewController: UIViewController) {
-        let searchBar = UISearchController(searchResultsController: nil)
-        searchBar.searchResultsUpdater = searchResultsUpdater
-        searchBar.obscuresBackgroundDuringPresentation = false
-        viewController.navigationItem.searchController = searchBar
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = searchResultsUpdater
+        searchController.obscuresBackgroundDuringPresentation = false
+        viewController.navigationItem.searchController = searchController
         viewController.navigationItem.hidesSearchBarWhenScrolling = true
         viewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sort by", style: .plain, target: self, action: #selector(MainScreenTableViewController.sortList))
         viewController.navigationItem.rightBarButtonItem?.tintColor = .darkText

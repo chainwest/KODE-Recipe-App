@@ -21,9 +21,11 @@ class MainScreenViewModel {
     
     var onDidUpdate: (() -> Void)?
     
+    private(set) var storedRecipeList = [RecipeListElement]()
     private(set) var recipeList = [RecipeListElement]()
-    private(set) var filteredRecipeList = [RecipeListElement]()
-    private var numberOfRows: Int = 0
+    private var numberOfRows: Int {
+        return recipeList.count
+    }
     
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
@@ -35,9 +37,8 @@ class MainScreenViewModel {
         dependencies.apiService.getRecipesList { response in
             switch response {
             case .success(let data):
-                self.recipeList = data.recipes
-                self.filteredRecipeList = self.recipeList
-                self.numberOfRows = self.recipeList.count
+                self.storedRecipeList = data.recipes
+                self.recipeList = self.storedRecipeList
                 self.onDidUpdate?()
             case .failure(let error):
                 print(error)
@@ -51,41 +52,44 @@ class MainScreenViewModel {
         let lowercasedInput = input.lowercased()
         
         guard !input.isEmpty else {
-            updateRecipes()
+            updateRecipes(filteredRecipeList: storedRecipeList)
             return
         }
         
-        filteredRecipeList = recipeList.filter { recipe -> Bool in
+        let filteredRecipeList = recipeList.filter { recipe -> Bool in
             recipe.name.lowercased().contains(lowercasedInput) ||
             recipe.instructions.lowercased().contains(lowercasedInput) ||
             recipe.description!.lowercased().contains(lowercasedInput)
         }
-        updateRecipes()
+        updateRecipes(filteredRecipeList: filteredRecipeList)
     }
     
-    private func updateRecipes() {
-        self.numberOfRows = filteredRecipeList.count
+    //MARK: - Help methods
+    
+    private func updateRecipes(filteredRecipeList: [RecipeListElement]) {
+        recipeList = filteredRecipeList
         onDidUpdate?()
+    }
+    
+    func restoreList() {
+        recipeList = storedRecipeList
+    }
+    
+    func sortByName() {
+        recipeList.sort { (first, second) -> Bool in
+            first.name < second.name
+        }
+    }
+    
+    func sortByDate() {
+        recipeList.sort { (first, second) -> Bool in
+            first.lastUpdated < second.lastUpdated
+        }
     }
     
     //MARK: - Sort List
     
-//    func sortByName() -> UIAlertAction {
-//
-//
-//        return actionSortByName
-//    }
-//
-//    func sortByDate() -> UIAlertAction {
-//        let actionSortByDate = UIAlertAction(title: "By date", style: .default) { alert in
-//            self.filteredRecipeList.sort { (first, second) -> Bool in
-//                first.lastUpdated < second.lastUpdated
-//            }
-//            self.onDidUpdate?()
-//        }
-//
-//        return actionSortByDate
-//    }
+    
     
     //MARK: - TableView methods
     

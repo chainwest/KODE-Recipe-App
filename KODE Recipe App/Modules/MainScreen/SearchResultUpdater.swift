@@ -17,11 +17,10 @@ class SearchResultUpdater: NSObject, UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchInput = searchController.searchBar.text else { return }
-        
         viewModel.filterList(input: searchInput)
         
         if !searchController.isActive {
-            viewModel.getRecipesList()
+            viewModel.restoreList()
         }
     }
 }

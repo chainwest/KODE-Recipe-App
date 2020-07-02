@@ -42,19 +42,18 @@ class MainScreenTableViewController: UITableViewController {
     }
     
     @objc func sortList(sender: UIButton!) {
-        let alert = UIAlertController(title: "Sort Type", message: nil, preferredStyle: .actionSheet)
-//        let actionSortByName = UIAlertAction(title: "By name", style: .default) { alert in
-//            self.viewModel.filteredRecipeList.sort { (first, second) -> Bool in
-//                first.name < second.name
-//            }
-//            self.onDidUpdate?()
-//        }
-//        
-//        alert.addAction(actionSortByName)
-//        alert.addAction(actionSortByDate)
-//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-//        
-//        present(alert, animated: true, completion: nil)
+        viewModel.onDidUpdate = { [weak self] in
+            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+            let actionOne = UIAlertAction(title: "By name", style: .default) { action in
+                self?.viewModel.sortByName()
+            }
+            let actionTwo = UIAlertAction(title: "By date", style: .default) { action in
+                self?.viewModel.sortByDate()
+            }
+            alert.addAction(actionOne)
+            alert.addAction(actionTwo)
+            self?.present(alert, animated: true, completion: nil)
+        }
     }
 
 }
