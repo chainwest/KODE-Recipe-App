@@ -15,10 +15,11 @@ class DetailsScreenViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var sliderContainerView: UIView!
     @IBOutlet weak var sliderScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var difficultyOne: UIImageView!
     @IBOutlet weak var difficultyTwo: UIImageView!
@@ -74,7 +75,7 @@ class DetailsScreenViewController: UIViewController, UIScrollViewDelegate {
         titleLabel.text = recipe.recipe.name
         //dateLabel.text = String(recipe.recipe.lastUpdated)
         descriptionLabel.text = recipe.recipe.description
-        instructionLabel.text = recipe.recipe.instructions
+        instructionLabel.text = recipe.recipe.instructions.replacingOccurrences(of: "<br>", with: "\n\n")
     }
     
     private func setupDifficulty(recipe: RecipeResponse) {

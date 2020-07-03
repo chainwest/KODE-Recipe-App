@@ -36,7 +36,7 @@ class MainScreenCoordinator: Coordinator {
         searchController.obscuresBackgroundDuringPresentation = false
         viewController.navigationItem.searchController = searchController
         viewController.navigationItem.hidesSearchBarWhenScrolling = true
-        viewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sort by", style: .plain, target: self, action: #selector(MainScreenTableViewController.sortList))
+        viewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sort by", style: .plain, target: MainScreenTableViewController.self, action: #selector(MainScreenTableViewController.sortList))
         viewController.navigationItem.rightBarButtonItem?.tintColor = .darkText
     }
 }

@@ -79,12 +79,14 @@ class MainScreenViewModel {
         recipeList.sort { (first, second) -> Bool in
             first.name < second.name
         }
+        onDidUpdate?()
     }
     
     func sortByDate() {
         recipeList.sort { (first, second) -> Bool in
             first.lastUpdated < second.lastUpdated
         }
+        onDidUpdate?()
     }
     
     //MARK: - Sort List
