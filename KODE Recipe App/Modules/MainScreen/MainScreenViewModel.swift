@@ -59,7 +59,7 @@ class MainScreenViewModel {
         let filteredRecipeList = recipeList.filter { recipe -> Bool in
             recipe.name.lowercased().contains(lowercasedInput) ||
             recipe.instructions.lowercased().contains(lowercasedInput) ||
-            recipe.description!.lowercased().contains(lowercasedInput)
+            (recipe.description != nil && recipe.description!.lowercased().contains(lowercasedInput))
         }
         updateRecipes(filteredRecipeList: filteredRecipeList)
     }
