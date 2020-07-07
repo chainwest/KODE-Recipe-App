@@ -3,25 +3,63 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		78F0E6D0E911A9F79AD8ACF3 /* Pods_KODE_Recipe_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885D5C7D2F742B2B7BD8E467 /* Pods_KODE_Recipe_App.framework */; };
+		DA1A571E24A354A90047C637 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A571D24A354A90047C637 /* ApiService.swift */; };
+		DA1A572224A359A20047C637 /* MainScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A572124A359A20047C637 /* MainScreenTableViewController.swift */; };
+		DA1A572424A386770047C637 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A572324A386770047C637 /* MainScreenViewModel.swift */; };
+		DA229E8B24A4AA2100EE3F19 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E8A24A4AA2100EE3F19 /* Coordinator.swift */; };
+		DA229E8D24A4AA6000EE3F19 /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E8C24A4AA6000EE3F19 /* MainScreenCoordinator.swift */; };
+		DA229E8F24A4AC0D00EE3F19 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E8E24A4AC0D00EE3F19 /* AppCoordinator.swift */; };
+		DA229E9124A4EC9100EE3F19 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E9024A4EC9100EE3F19 /* AppDependency.swift */; };
+		DA229E9D24A73D1A00EE3F19 /* MainScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E9B24A73D1900EE3F19 /* MainScreenTableViewCell.swift */; };
+		DA229E9E24A73D1A00EE3F19 /* MainScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA229E9C24A73D1A00EE3F19 /* MainScreenTableViewCell.xib */; };
+		DA55F26124AB5C5100421178 /* DetailsScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA55F26024AB5C5100421178 /* DetailsScreenCoordinator.swift */; };
+		DABE3C7424B4C49E00E2E330 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE3C7224B4C49E00E2E330 /* GalleryView.swift */; };
+		DABE3C7524B4C49E00E2E330 /* GalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DABE3C7324B4C49E00E2E330 /* GalleryView.xib */; };
+		DADEAB6124A7CF82002729F4 /* DetailsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEAB6024A7CF82002729F4 /* DetailsScreenViewModel.swift */; };
+		DADEAB6524A87B4F002729F4 /* SearchResultUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEAB6424A87B4F002729F4 /* SearchResultUpdater.swift */; };
+		DAEB1C5E24A9B1260000D622 /* DetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB1C5C24A9B1260000D622 /* DetailsScreenViewController.swift */; };
+		DAEB1C5F24A9B1260000D622 /* DetailsScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAEB1C5D24A9B1260000D622 /* DetailsScreenViewController.xib */; };
 		DAF33DE324A3347D002E3EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */; };
 		DAF33DEC24A33480002E3EE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DEB24A33480002E3EE6 /* Assets.xcassets */; };
 		DAF33DEF24A33480002E3EE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF33DED24A33480002E3EE6 /* LaunchScreen.storyboard */; };
+		DAF33DFD24A34741002E3EE6 /* RecipesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF33DFC24A34741002E3EE6 /* RecipesList.swift */; };
+		DAF33DFF24A3484D002E3EE6 /* SingleRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF33DFE24A3484D002E3EE6 /* SingleRecipe.swift */; };
+		DAF33E0124A34984002E3EE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF33E0024A34984002E3EE6 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A1E3C27E42E19555BCEA31C /* Pods-KODE Recipe App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KODE Recipe App.release.xcconfig"; path = "Target Support Files/Pods-KODE Recipe App/Pods-KODE Recipe App.release.xcconfig"; sourceTree = "<group>"; };
 		52CB2526063363183487B11C /* Pods-KODE Recipe App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KODE Recipe App.debug.xcconfig"; path = "Target Support Files/Pods-KODE Recipe App/Pods-KODE Recipe App.debug.xcconfig"; sourceTree = "<group>"; };
 		885D5C7D2F742B2B7BD8E467 /* Pods_KODE_Recipe_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KODE_Recipe_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1A571D24A354A90047C637 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		DA1A572124A359A20047C637 /* MainScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewController.swift; sourceTree = "<group>"; };
+		DA1A572324A386770047C637 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		DA229E8A24A4AA2100EE3F19 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DA229E8C24A4AA6000EE3F19 /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
+		DA229E8E24A4AC0D00EE3F19 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DA229E9024A4EC9100EE3F19 /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
+		DA229E9B24A73D1900EE3F19 /* MainScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewCell.swift; sourceTree = "<group>"; };
+		DA229E9C24A73D1A00EE3F19 /* MainScreenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenTableViewCell.xib; sourceTree = "<group>"; };
+		DA55F26024AB5C5100421178 /* DetailsScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenCoordinator.swift; sourceTree = "<group>"; };
+		DABE3C7224B4C49E00E2E330 /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryView.swift; path = "../../../../../../Desktop/KODE-Recipe-App/KODE Recipe App/Modules/DetailsScreen/GalleryView.swift"; sourceTree = "<group>"; };
+		DABE3C7324B4C49E00E2E330 /* GalleryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GalleryView.xib; path = "../../../../../../Desktop/KODE-Recipe-App/KODE Recipe App/Modules/DetailsScreen/GalleryView.xib"; sourceTree = "<group>"; };
+		DADEAB6024A7CF82002729F4 /* DetailsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewModel.swift; sourceTree = "<group>"; };
+		DADEAB6424A87B4F002729F4 /* SearchResultUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultUpdater.swift; sourceTree = "<group>"; };
+		DAEB1C5C24A9B1260000D622 /* DetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewController.swift; sourceTree = "<group>"; };
+		DAEB1C5D24A9B1260000D622 /* DetailsScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsScreenViewController.xib; sourceTree = "<group>"; };
 		DAF33DDF24A3347D002E3EE6 /* KODE Recipe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KODE Recipe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF33DEB24A33480002E3EE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAF33DEE24A33480002E3EE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAF33DF024A33480002E3EE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAF33DFC24A34741002E3EE6 /* RecipesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesList.swift; sourceTree = "<group>"; };
+		DAF33DFE24A3484D002E3EE6 /* SingleRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRecipe.swift; sourceTree = "<group>"; };
+		DAF33E0024A34984002E3EE6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +80,50 @@
 				885D5C7D2F742B2B7BD8E467 /* Pods_KODE_Recipe_App.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA1A571C24A3549C0047C637 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DA1A571D24A354A90047C637 /* ApiService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DA1A571F24A3595D0047C637 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DADEAB5F24A7CF5D002729F4 /* DetailsScreen */,
+				DA1A572024A3597A0047C637 /* MainScreen */,
+				DA229E8A24A4AA2100EE3F19 /* Coordinator.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DA1A572024A3597A0047C637 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DADEAB6424A87B4F002729F4 /* SearchResultUpdater.swift */,
+				DA1A572324A386770047C637 /* MainScreenViewModel.swift */,
+				DA1A572124A359A20047C637 /* MainScreenTableViewController.swift */,
+				DA229E8C24A4AA6000EE3F19 /* MainScreenCoordinator.swift */,
+				DA229E9B24A73D1900EE3F19 /* MainScreenTableViewCell.swift */,
+				DA229E9C24A73D1A00EE3F19 /* MainScreenTableViewCell.xib */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		DADEAB5F24A7CF5D002729F4 /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DA55F26024AB5C5100421178 /* DetailsScreenCoordinator.swift */,
+				DADEAB6024A7CF82002729F4 /* DetailsScreenViewModel.swift */,
+				DAEB1C5C24A9B1260000D622 /* DetailsScreenViewController.swift */,
+				DAEB1C5D24A9B1260000D622 /* DetailsScreenViewController.xib */,
+				DABE3C7224B4C49E00E2E330 /* GalleryView.swift */,
+				DABE3C7324B4C49E00E2E330 /* GalleryView.xib */,
+			);
+			path = DetailsScreen;
 			sourceTree = "<group>";
 		};
 		DAF33DD624A3347D002E3EE6 = {
@@ -65,6 +147,12 @@
 		DAF33DE124A3347D002E3EE6 /* KODE Recipe App */ = {
 			isa = PBXGroup;
 			children = (
+				DAF33DF924A34709002E3EE6 /* Values */,
+				DA1A571C24A3549C0047C637 /* Services */,
+				DAF33DF724A346F5002E3EE6 /* Models */,
+				DA1A571F24A3595D0047C637 /* Modules */,
+				DA229E9024A4EC9100EE3F19 /* AppDependency.swift */,
+				DA229E8E24A4AC0D00EE3F19 /* AppCoordinator.swift */,
 				DAF33DE224A3347D002E3EE6 /* AppDelegate.swift */,
 				DAF33DEB24A33480002E3EE6 /* Assets.xcassets */,
 				DAF33DED24A33480002E3EE6 /* LaunchScreen.storyboard */,
@@ -73,13 +161,29 @@
 			path = "KODE Recipe App";
 			sourceTree = "<group>";
 		};
+		DAF33DF724A346F5002E3EE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DAF33DFC24A34741002E3EE6 /* RecipesList.swift */,
+				DAF33DFE24A3484D002E3EE6 /* SingleRecipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DAF33DF924A34709002E3EE6 /* Values */ = {
+			isa = PBXGroup;
+			children = (
+				DAF33E0024A34984002E3EE6 /* Constants.swift */,
+			);
+			path = Values;
+			sourceTree = "<group>";
+		};
 		DC43A65E68E9E944EC3E063E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				52CB2526063363183487B11C /* Pods-KODE Recipe App.debug.xcconfig */,
 				1A1E3C27E42E19555BCEA31C /* Pods-KODE Recipe App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -143,6 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA229E9E24A73D1A00EE3F19 /* MainScreenTableViewCell.xib in Resources */,
+				DABE3C7524B4C49E00E2E330 /* GalleryView.xib in Resources */,
+				DAEB1C5F24A9B1260000D622 /* DetailsScreenViewController.xib in Resources */,
 				DAF33DEF24A33480002E3EE6 /* LaunchScreen.storyboard in Resources */,
 				DAF33DEC24A33480002E3EE6 /* Assets.xcassets in Resources */,
 			);
@@ -197,7 +304,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADEAB6124A7CF82002729F4 /* DetailsScreenViewModel.swift in Sources */,
+				DA229E9124A4EC9100EE3F19 /* AppDependency.swift in Sources */,
+				DA229E8B24A4AA2100EE3F19 /* Coordinator.swift in Sources */,
+				DA55F26124AB5C5100421178 /* DetailsScreenCoordinator.swift in Sources */,
+				DA1A572224A359A20047C637 /* MainScreenTableViewController.swift in Sources */,
+				DABE3C7424B4C49E00E2E330 /* GalleryView.swift in Sources */,
+				DA229E8F24A4AC0D00EE3F19 /* AppCoordinator.swift in Sources */,
+				DA1A572424A386770047C637 /* MainScreenViewModel.swift in Sources */,
 				DAF33DE324A3347D002E3EE6 /* AppDelegate.swift in Sources */,
+				DA1A571E24A354A90047C637 /* ApiService.swift in Sources */,
+				DADEAB6524A87B4F002729F4 /* SearchResultUpdater.swift in Sources */,
+				DAF33DFD24A34741002E3EE6 /* RecipesList.swift in Sources */,
+				DA229E9D24A73D1A00EE3F19 /* MainScreenTableViewCell.swift in Sources */,
+				DA229E8D24A4AA6000EE3F19 /* MainScreenCoordinator.swift in Sources */,
+				DAEB1C5E24A9B1260000D622 /* DetailsScreenViewController.swift in Sources */,
+				DAF33DFF24A3484D002E3EE6 /* SingleRecipe.swift in Sources */,
+				DAF33E0124A34984002E3EE6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L5W87GC5M7;
+				DEVELOPMENT_TEAM = T5T228SHK5;
 				INFOPLIST_FILE = "KODE Recipe App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -354,7 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L5W87GC5M7;
+				DEVELOPMENT_TEAM = T5T228SHK5;
 				INFOPLIST_FILE = "KODE Recipe App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
