@@ -18,8 +18,8 @@
 		DA229E9D24A73D1A00EE3F19 /* MainScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA229E9B24A73D1900EE3F19 /* MainScreenTableViewCell.swift */; };
 		DA229E9E24A73D1A00EE3F19 /* MainScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA229E9C24A73D1A00EE3F19 /* MainScreenTableViewCell.xib */; };
 		DA55F26124AB5C5100421178 /* DetailsScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA55F26024AB5C5100421178 /* DetailsScreenCoordinator.swift */; };
-		DABE3C7424B4C49E00E2E330 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE3C7224B4C49E00E2E330 /* GalleryView.swift */; };
-		DABE3C7524B4C49E00E2E330 /* GalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DABE3C7324B4C49E00E2E330 /* GalleryView.xib */; };
+		DA9F048A24BC29A9006925DC /* GalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9F048824BC29A9006925DC /* GalleryView.xib */; };
+		DA9F048B24BC29A9006925DC /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F048924BC29A9006925DC /* GalleryView.swift */; };
 		DADEAB6124A7CF82002729F4 /* DetailsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEAB6024A7CF82002729F4 /* DetailsScreenViewModel.swift */; };
 		DADEAB6524A87B4F002729F4 /* SearchResultUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEAB6424A87B4F002729F4 /* SearchResultUpdater.swift */; };
 		DAEB1C5E24A9B1260000D622 /* DetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB1C5C24A9B1260000D622 /* DetailsScreenViewController.swift */; };
@@ -46,8 +46,8 @@
 		DA229E9B24A73D1900EE3F19 /* MainScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewCell.swift; sourceTree = "<group>"; };
 		DA229E9C24A73D1A00EE3F19 /* MainScreenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenTableViewCell.xib; sourceTree = "<group>"; };
 		DA55F26024AB5C5100421178 /* DetailsScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenCoordinator.swift; sourceTree = "<group>"; };
-		DABE3C7224B4C49E00E2E330 /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryView.swift; path = "../../../../../../Desktop/KODE-Recipe-App/KODE Recipe App/Modules/DetailsScreen/GalleryView.swift"; sourceTree = "<group>"; };
-		DABE3C7324B4C49E00E2E330 /* GalleryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GalleryView.xib; path = "../../../../../../Desktop/KODE-Recipe-App/KODE Recipe App/Modules/DetailsScreen/GalleryView.xib"; sourceTree = "<group>"; };
+		DA9F048824BC29A9006925DC /* GalleryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryView.xib; sourceTree = "<group>"; };
+		DA9F048924BC29A9006925DC /* GalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		DADEAB6024A7CF82002729F4 /* DetailsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewModel.swift; sourceTree = "<group>"; };
 		DADEAB6424A87B4F002729F4 /* SearchResultUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultUpdater.swift; sourceTree = "<group>"; };
 		DAEB1C5C24A9B1260000D622 /* DetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewController.swift; sourceTree = "<group>"; };
@@ -120,8 +120,8 @@
 				DADEAB6024A7CF82002729F4 /* DetailsScreenViewModel.swift */,
 				DAEB1C5C24A9B1260000D622 /* DetailsScreenViewController.swift */,
 				DAEB1C5D24A9B1260000D622 /* DetailsScreenViewController.xib */,
-				DABE3C7224B4C49E00E2E330 /* GalleryView.swift */,
-				DABE3C7324B4C49E00E2E330 /* GalleryView.xib */,
+				DA9F048924BC29A9006925DC /* GalleryView.swift */,
+				DA9F048824BC29A9006925DC /* GalleryView.xib */,
 			);
 			path = DetailsScreen;
 			sourceTree = "<group>";
@@ -248,7 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA229E9E24A73D1A00EE3F19 /* MainScreenTableViewCell.xib in Resources */,
-				DABE3C7524B4C49E00E2E330 /* GalleryView.xib in Resources */,
+				DA9F048A24BC29A9006925DC /* GalleryView.xib in Resources */,
 				DAEB1C5F24A9B1260000D622 /* DetailsScreenViewController.xib in Resources */,
 				DAF33DEF24A33480002E3EE6 /* LaunchScreen.storyboard in Resources */,
 				DAF33DEC24A33480002E3EE6 /* Assets.xcassets in Resources */,
@@ -309,7 +309,7 @@
 				DA229E8B24A4AA2100EE3F19 /* Coordinator.swift in Sources */,
 				DA55F26124AB5C5100421178 /* DetailsScreenCoordinator.swift in Sources */,
 				DA1A572224A359A20047C637 /* MainScreenTableViewController.swift in Sources */,
-				DABE3C7424B4C49E00E2E330 /* GalleryView.swift in Sources */,
+				DA9F048B24BC29A9006925DC /* GalleryView.swift in Sources */,
 				DA229E8F24A4AC0D00EE3F19 /* AppCoordinator.swift in Sources */,
 				DA1A572424A386770047C637 /* MainScreenViewModel.swift in Sources */,
 				DAF33DE324A3347D002E3EE6 /* AppDelegate.swift in Sources */,
