@@ -49,8 +49,10 @@ class MainScreenTableViewController: UITableViewController {
         let actionTwo = UIAlertAction(title: "By date", style: .default) { action in
             self.viewModel.sortByDate()
         }
+        let actionThree = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(actionOne)
         alert.addAction(actionTwo)
+        alert.addAction(actionThree)
         self.present(alert, animated: true, completion: nil)
     }
 

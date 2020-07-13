@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GalleryView" customModule="KODE_Recipe_App" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="BMb-hi-tgI"/>
+                <outlet property="pageControl" destination="1D2-vs-eZQ" id="qKO-Hk-ZfB"/>
+                <outlet property="scrollView" destination="RHg-He-53e" id="NUf-Ti-lRx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="255"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RHg-He-53e">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="255"/>
+                    <subviews>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="1D2-vs-eZQ">
+                            <rect key="frame" x="8" y="210" width="398" height="37"/>
+                        </pageControl>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Csd-m7-i0N" firstAttribute="trailing" secondItem="1D2-vs-eZQ" secondAttribute="trailing" constant="8" id="CR9-VZ-w9Z"/>
+                        <constraint firstItem="Csd-m7-i0N" firstAttribute="bottom" secondItem="1D2-vs-eZQ" secondAttribute="bottom" constant="8" id="SrF-KR-xsF"/>
+                        <constraint firstItem="1D2-vs-eZQ" firstAttribute="leading" secondItem="Csd-m7-i0N" secondAttribute="leading" constant="8" id="Z96-ge-p66"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="oDp-jF-oLO"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Csd-m7-i0N"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="RHg-He-53e" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="5sE-uy-1W1"/>
+                <constraint firstItem="RHg-He-53e" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8qL-1m-gDM"/>
+                <constraint firstItem="RHg-He-53e" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="OJL-1O-leZ"/>
+                <constraint firstItem="RHg-He-53e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cO3-h4-NjC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="140.57971014492756" y="-61.272321428571423"/>
+        </view>
+    </objects>
+</document>

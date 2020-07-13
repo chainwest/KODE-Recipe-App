@@ -38,7 +38,7 @@ class MainScreenViewModel {
             switch response {
             case .success(let data):
                 self.storedRecipeList = data.recipes
-                self.recipeList = self.storedRecipeList
+                self.recipeList = data.recipes
                 self.onDidUpdate?()
             case .failure(let error):
                 print(error)
@@ -75,23 +75,29 @@ class MainScreenViewModel {
         recipeList = storedRecipeList
     }
     
+    //MARK: - Sort List
+    
     func sortByName() {
-        recipeList.sort { (first, second) -> Bool in
+        recipeList.sort { first, second -> Bool in
+            first.name < second.name
+        }
+        
+        storedRecipeList.sort { first, second -> Bool in
             first.name < second.name
         }
         onDidUpdate?()
     }
     
     func sortByDate() {
-        recipeList.sort { (first, second) -> Bool in
+        recipeList.sort { first, second -> Bool in
+            first.lastUpdated < second.lastUpdated
+        }
+        
+        storedRecipeList.sort { first, second -> Bool in
             first.lastUpdated < second.lastUpdated
         }
         onDidUpdate?()
     }
-    
-    //MARK: - Sort List
-    
-    
     
     //MARK: - TableView methods
     

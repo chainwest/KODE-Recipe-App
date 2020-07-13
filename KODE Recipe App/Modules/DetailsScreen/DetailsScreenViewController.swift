@@ -12,9 +12,7 @@ import Kingfisher
 class DetailsScreenViewController: UIViewController, UIScrollViewDelegate {
     let viewModel: DetailsScreenViewModel
     
-    @IBOutlet weak var sliderContainerView: UIView!
-    @IBOutlet weak var sliderScrollView: UIScrollView!
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var galleryView: GalleryView!
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -45,35 +43,20 @@ class DetailsScreenViewController: UIViewController, UIScrollViewDelegate {
     
     private func bindToViewModel() {
         viewModel.onDidUpdate = { [weak self] in
-            self?.setupImageSlider(recipe: (self?.viewModel.recipeResponse)!)
+            self?.galleryView.setupImageSlider(recipe: (self?.viewModel.recipeResponse)!)
             self?.setupLabels(recipe: (self?.viewModel.recipeResponse)!)
             self?.setupDifficulty(recipe: (self?.viewModel.recipeResponse)!)
         }
     }
     
-    private func setupImageSlider(recipe: RecipeResponse) {
-        sliderScrollView.isPagingEnabled = true
-        sliderScrollView.showsHorizontalScrollIndicator = false
-        pageControl.numberOfPages = recipe.recipe.images.count
-        
-        for image in 0..<recipe.recipe.images.count {
-            let imageView = UIImageView()
-            let imageURL = URL(string: recipe.recipe.images[image])
-            let xPosition = self.sliderContainerView.frame.width * CGFloat(image)
-            
-            imageView.frame = CGRect(x: xPosition, y: 0, width: self.sliderScrollView.frame.width, height: self.sliderScrollView.frame.height)
-            imageView.kf.setImage(with: imageURL)
-            imageView.contentMode = .scaleAspectFill
-            
-            sliderScrollView.delegate = self
-            sliderScrollView.contentSize.width = sliderScrollView.frame.width * CGFloat(image + 1)
-            sliderScrollView.addSubview(imageView)
-        }
-    }
-    
     private func setupLabels(recipe: RecipeResponse) {
+        let timeInterval = Double(recipe.recipe.lastUpdated)
+        let date = Date(timeIntervalSince1970: timeInterval)
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        
         titleLabel.text = recipe.recipe.name
-        //dateLabel.text = String(recipe.recipe.lastUpdated)
+        dateLabel.text = formatter.string(from: date)
         descriptionLabel.text = recipe.recipe.description
         instructionLabel.text = recipe.recipe.instructions.replacingOccurrences(of: "<br>", with: "\n\n")
     }
@@ -96,12 +79,5 @@ class DetailsScreenViewController: UIViewController, UIScrollViewDelegate {
                 imageView?.image = UIImage(named: "Shape-2")
             }
         }
-    }
-}
-
-extension DetailsScreenViewController {
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let currentPageNumber = sliderScrollView.contentOffset.x / sliderScrollView.frame.size.width
-        pageControl.currentPage = Int(currentPageNumber)
     }
 }

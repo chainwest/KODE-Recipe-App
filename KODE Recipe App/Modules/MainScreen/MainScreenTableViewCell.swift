@@ -29,10 +29,14 @@ class MainScreenTableViewCell: UITableViewCell {
     
     func setupCell(viewModel: MainScreenViewModel, indexPath: IndexPath) {
         let imageURL = URL(string: (viewModel.recipeList[indexPath.row].images.first)!)
+        let timeInterval = Double(viewModel.recipeList[indexPath.row].lastUpdated)
+        let date = Date(timeIntervalSince1970: timeInterval)
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
         
         titleLabel.text = viewModel.recipeList[indexPath.row].name
         descriptionLabel.text = viewModel.recipeList[indexPath.row].description
-        //dateLabel.text = String(viewModel.recipeList[indexPath.row].lastUpdated)
+        dateLabel.text = formatter.string(from: date)
         recipeImageView.kf.setImage(with: imageURL)
     }
 }
